@@ -1,0 +1,20 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-title><span style="font-size: 15px; color: #2dd36f;">C</span><span style="text-transform: uppercase;">omponente</span><span style="font-size: 15px; color: #2dd36f;">s</span> </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item *ngFor="let componente of componentes" [routerLink]="componente.redirectTo" detail>
+      <ion-icon color="success" slot="start" [name]="componente.icon"></ion-icon>
+      <ion-label>
+        {{componente.name}}
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
