@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-toolbar>
+
+    <ion-buttons slot="start">
+
+      <ion-back-button color="success" defaultHref="/"></ion-back-button>
+
+    </ion-buttons>
+
+      <ion-title>Botones</ion-title>
+
+      <ion-buttons slot="end">
+
+        <ion-button color="success">
+          <ion-icon name="star"></ion-icon>
+        </ion-button>
+
+        <ion-button color="success">
+          <ion-icon name="heart"></ion-icon>
+        </ion-button>
+
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Botones normales -->
+  <h4>Tamaños</h4>
+  <ion-button color="success" size="small" expand="full">Small</ion-button>
+  <ion-button color="warning" size="default" expand="full">Default</ion-button>
+  <ion-button color="secondary" size="large" expand="full">Larga</ion-button>
+  <br>
+
+  <!-- Router -->
+  <h4>Enlazar</h4>
+  <ion-button expand="full" routerLink="/alert" color="tertiary">
+    Ir a Alerta
+  </ion-button>
+  <br>
+
+  <!-- ion-row + ion col -->
+  <h4>Filas y Columnas</h4>
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" routerLink="/avatar" color="danger">
+        Ir a Avatar
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button expand="full" routerLink="/action-sheet" color="danger">
+        Ir a Action Sheet
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <!-- Fill -->
+  <h4>Formatos</h4>
+  <ion-button class="top-20" fill="clear">Clear</ion-button>
+  <ion-button fill="outline">Outline</ion-button>
+  <ion-button fill="solid">Solid</ion-button>
+</ion-content>
