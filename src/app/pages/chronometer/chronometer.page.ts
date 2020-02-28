@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, AlertController, Platform } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-chronometer',
@@ -22,8 +22,7 @@ export class ChronometerPage implements OnInit {
   arranque: boolean = false;
 
   constructor(public navCtrl: NavController,
-              private plt: Platform,
-              alertCtrl: AlertController
+              public alertCtrl: AlertController
     ) { }
 
   ngOnInit() {
@@ -75,7 +74,7 @@ export class ChronometerPage implements OnInit {
   stop() {
 
     if (!this.isRun) {
-      clearInterval(this.contador);
+/*       clearInterval(this.contador);
       this.minutos = 0;
       this.segundos = 0;
       this.centesimas = 0;
@@ -86,10 +85,39 @@ export class ChronometerPage implements OnInit {
 
       this.estado = 'Start';
       this.isRun = false;
-      this.contador = null;
+      this.contador = null; */
       this.arranque = false;
     }
+    // tslint:disable-next-line: max-line-length
+    console.log('La duración de delay fué de: ' + this._minutos + ' ' + 'minutos' + ' ' + this._segundos + ' ' + 'segundos' + ' ' + this._centesimas + ' ' + 'centesimas');
+    this.presentAlert();
+  }
 
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'Tiempo',
+      subHeader: 'Duración de la Daily',
+      // tslint:disable-next-line: max-line-length
+      message: this._minutos + ' ' + 'minutos' + ' ' + this._segundos + ' ' + 'segundos' + ' ' + this._centesimas + ' ' + 'centesimas',
+      backdropDismiss: false,
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Ok',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }
