@@ -5,7 +5,7 @@
       <!-- <ion-col size="12" size-lg="3" size-md="4" size-sm="6" size-xs="12"> -->
         <ion-col size="12">
           <div class="centrado">
-            <ion-button color="success" (click)="estadoSwap()">
+            <ion-button size="large" color="success" (click)="estadoSwap()">
               {{estado}}
             </ion-button>
         </div>
@@ -23,7 +23,7 @@
         <ion-row>
           <ion-col>
             <div class="centrado">
-              <ion-button color="danger" *ngIf="arranque" (click)="stop()">
+              <ion-button size="large" color="danger" *ngIf="arranque" (click)="stop()">
                 Stop
               </ion-button>
             </div>
