@@ -9,17 +9,17 @@ export class InicioPage implements OnInit {
 
   componentes: Componente[] = [
     {
-      icon: 'american-football',
+      icon: 'paper-plane-outline',
       name: 'Action Sheet',
       redirectTo: '/action-sheet'
     },
     {
-      icon: 'logo-apple-appstore',
+      icon: 'notifications-outline',
       name: 'Alert',
       redirectTo: '/alert'
     },
     {
-      icon: 'beaker',
+      icon: 'skull-outline',
       name: 'Avatar',
       redirectTo: '/avatar'
     },
@@ -44,7 +44,7 @@ export class InicioPage implements OnInit {
       redirectTo: '/date-time'
     },
     {
-      icon: 'car',
+      icon: 'share-social-outline',
       name: 'Fabs',
       redirectTo: '/fab'
     },
@@ -52,6 +52,21 @@ export class InicioPage implements OnInit {
       icon: 'grid',
       name: 'Grid - Rows',
       redirectTo: '/grid'
+    },
+    {
+      icon: 'infinite',
+      name: 'Infinite Scroll',
+      redirectTo: '/infinite-scroll'
+    },
+    {
+      icon: 'create-outline',
+      name: 'Input - Forms',
+      redirectTo: '/input'
+    },
+    {
+      icon: 'alarm-outline',
+      name: 'Chronometer',
+      redirectTo: '/chronometer'
     }
   ];
 
