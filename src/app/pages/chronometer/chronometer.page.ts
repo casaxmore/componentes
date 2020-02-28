@@ -44,6 +44,7 @@ export class ChronometerPage implements OnInit {
   start() {
 
     this.contador = setInterval(() => {
+      this.arranque = false;
       this.centesimas += 1;
       if (this.centesimas < 10) { this._centesimas = '0' + this.centesimas; }
       else { this._centesimas = '' + this.centesimas; }
