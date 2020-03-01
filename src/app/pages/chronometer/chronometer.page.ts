@@ -63,7 +63,7 @@ export class ChronometerPage implements OnInit {
           }
         }
       }
-    }, 100)
+    }, 100);
   }
 
   pause() {
@@ -89,7 +89,7 @@ export class ChronometerPage implements OnInit {
       this.arranque = false;
     }
     // tslint:disable-next-line: max-line-length
-    console.log('La duración de delay fué de: ' + this._minutos + ' ' + 'minutos' + ' ' + this._segundos + ' ' + 'segundos' + ' ' + this._centesimas + ' ' + 'centesimas');
+    console.log('La duración de delay fué de: ' + this._minutos + ' ' + 'min' + ' ' + this._segundos + ' ' + 'seg' + ' ' + this._centesimas + ' ' + 'cen');
     this.presentAlert();
   }
 
@@ -98,7 +98,7 @@ export class ChronometerPage implements OnInit {
       header: 'Tiempo',
       subHeader: 'Duración de la Daily',
       // tslint:disable-next-line: max-line-length
-      message: this._minutos + ' ' + 'minutos' + ' ' + this._segundos + ' ' + 'segundos' + ' ' + this._centesimas + ' ' + 'centesimas',
+      message: this._minutos + ' ' + 'min' + ' ' + this._segundos + ' ' + 'seg' + ' ' + this._centesimas + ' ' + 'cen',
       backdropDismiss: false,
       buttons: [
         {
@@ -112,6 +112,17 @@ export class ChronometerPage implements OnInit {
           text: 'Ok',
           handler: () => {
             console.log('Confirm Okay');
+            this.minutos = 0;
+            this.segundos = 0;
+            this.centesimas = 0;
+
+            this._centesimas = '00';
+            this._segundos = '00';
+            this._minutos = '00';
+
+            this.estado = 'Start';
+            this.isRun = false;
+            this.contador = null;
           }
         }
       ]
