@@ -39,6 +39,11 @@ export class InicioPage implements OnInit {
       redirectTo: '/check'
     },
     {
+      icon: 'stopwatch-outline',
+      name: 'Chronometer',
+      redirectTo: '/chronometer'
+    },
+    {
       icon: 'calendar',
       name: 'DateTime',
       redirectTo: '/date-time'
@@ -64,9 +69,19 @@ export class InicioPage implements OnInit {
       redirectTo: '/input'
     },
     {
-      icon: 'alarm-outline',
-      name: 'Chronometer',
-      redirectTo: '/chronometer'
+      icon: 'list',
+      name: 'Listas - Sliding',
+      redirectTo: '/list'
+    },
+    {
+      icon: 'reorder-four-outline',
+      name: 'Listas - Rorder',
+      redirectTo: '/list-reorder'
+    },
+    {
+      icon: 'refresh-circle',
+      name: 'Loading',
+      redirectTo: '/loading'
     }
   ];
 

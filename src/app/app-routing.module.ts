@@ -54,6 +54,18 @@ const routes: Routes = [
   {
     path: 'chronometer',
     loadChildren: () => import('./pages/chronometer/chronometer.module').then( m => m.ChronometerPageModule)
+  },
+  {
+    path: 'list',
+    loadChildren: () => import('./pages/list/list.module').then( m => m.ListPageModule)
+  },
+  {
+    path: 'list-reorder',
+    loadChildren: () => import('./pages/list-reorder/list-reorder.module').then( m => m.ListReorderPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/loading/loading.module').then( m => m.LoadingPageModule)
   }
 ];
 
