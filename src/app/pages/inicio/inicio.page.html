@@ -1,5 +1,23 @@
 <ion-header no-border>
   <ion-toolbar>
+    
+    <ion-buttons slot="start">
+    
+      <!-- FORMA LARGA -->
+<!--       <ion-button (click)="toggleMenu()">
+        <ion-icon color="success"
+                  slot="icon-only"
+                  name="menu">
+        </ion-icon>
+      </ion-button> -->
+
+      <!-- FORMA CORTA -->
+      <ion-menu-button color="success"
+                       menu="primerMenu">
+      </ion-menu-button>
+
+    </ion-buttons>
+
     <ion-title><span style="font-size: 18px; color: #2dd36f;">c</span><span style="text-transform: uppercase;">omponente</span><span style="font-size: 18px; color: #2dd36f;">s</span> </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -8,7 +26,7 @@
 
   <ion-list>
 
-    <ion-item *ngFor="let componente of componentes" [routerLink]="componente.redirectTo" detail>
+    <ion-item *ngFor="let componente of componentes | async" [routerLink]="componente.redirectTo" detail>
       <ion-icon color="success" slot="start" [name]="componente.icon"></ion-icon>
       <ion-label>
         {{componente.name}}

@@ -98,7 +98,7 @@ export class ChronometerPage implements OnInit {
       header: 'Tiempo',
       subHeader: 'Duración de la Daily',
       // tslint:disable-next-line: max-line-length
-      message: this._minutos + ' ' + 'min' + ' ' + this._segundos + ' ' + 'seg' + ' ' + this._centesimas + ' ' + 'cen',
+      message: this._minutos + ' ' + 'min' + ' ' + this._segundos + ' ' + 'seg',
       backdropDismiss: false,
       buttons: [
         {

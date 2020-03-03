@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuController } from '@ionic/angular';
+import { Componente } from '../../interfaces/interfaces';
+import { DataService } from '../../services/data.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-inicio',
@@ -7,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioPage implements OnInit {
 
-  componentes: Componente[] = [
+  componentes: Observable<Componente[]>;
+
+  /* componentes: Componente[] = []; */
+
+  /* CREADO DATA EN ASSETS PARA GESTIONAR ESTA INFORMACIÓN */
+  /* componentes: Componente[] = [
     {
       icon: 'paper-plane-outline',
       name: 'Action Sheet',
@@ -83,17 +92,18 @@ export class InicioPage implements OnInit {
       name: 'Loading',
       redirectTo: '/loading'
     }
-  ];
+  ]; */
 
-  constructor() { }
+  constructor( private menuCtrl: MenuController,
+               private dataService: DataService) { }
 
   ngOnInit() {
+    this.componentes = this.dataService.getMenuOpts();
+  }
+
+  toggleMenu() {
+    this.menuCtrl.toggle();
   }
 
 }
 
-interface Componente {
-  icon: string;
-  name: string;
-  redirectTo: string;
-}
