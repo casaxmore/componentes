@@ -6,8 +6,6 @@ import { MenuComponent } from './menu/menu.component';
 import { RouterModule } from '@angular/router';
 import { PopinfoComponent } from './popinfo/popinfo.component';
 
-
-
 @NgModule({
   declarations: [
     HeaderComponent,
