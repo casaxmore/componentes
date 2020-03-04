@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class RefresherPage implements OnInit {
 
   items: any[] = [];
+  /* items: any[] = []; */
 
   constructor() { }
 
@@ -18,7 +19,10 @@ export class RefresherPage implements OnInit {
 
     setTimeout(() => {
 
-      this.items = Array(40);
+      const masArr = Array(40);
+
+      /* this.items = Array(40); */
+      this.items.push(...masArr);
       event.target.complete();
 
     }, 1500);

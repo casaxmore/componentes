@@ -6,9 +6,14 @@
         <ion-refresher-content></ion-refresher-content>
     </ion-refresher>
 
-        <h3>Pull to refresh</h3>
+        <h3 *ngIf="items.length === 0"
+            class="animated fadeIn fast"
+            style="margin-left: 10px;">
+            Pull to refresh
+        </h3>
 
-        <ion-list>
+        <ion-list *ngIf="items.length > 0"
+                  class="animated fadeIn fast">
             <ion-item *ngFor="let item of items; let i = index">
               Item {{ i + 1 }}
             </ion-item>
