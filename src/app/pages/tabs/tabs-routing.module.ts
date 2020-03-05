@@ -22,7 +22,7 @@ const routes: Routes = [
       },
       {
         path: 'settings',
-        loadChildren: '../botones/botones.module#BotonesPageModule'
+        loadChildren: '../list-reorder/list-reorder.module#ListReorderPageModule'
       }
     ]
   }
