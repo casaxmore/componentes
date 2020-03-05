@@ -61,7 +61,7 @@
     },
     {
       "icon": "list",
-      "name": "Listas - Sliding",
+      "name": "Listas - Sliding - Toast",
       "redirectTo": "/list"
     },
     {
@@ -108,5 +108,10 @@
       "icon": "albums",
       "name": "Slides",
       "redirectTo": "/slides"
+    },
+    {
+      "icon": "cog",
+      "name": "Tabs",
+      "redirectTo": "/tabs/account"
     }
   ]
