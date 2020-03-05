@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+
   @Input() titulo: string;
 
-  constructor() { }
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {}
+
+/*   volver() {
+    this.navCtrl.navigateForward('/');
+    console.log('Paso por aquí');
+  } */
 
 }

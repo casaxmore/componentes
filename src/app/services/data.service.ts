@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Componente } from '../interfaces/interfaces';
 
+import { delay } from 'rxjs/operators';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -19,5 +21,17 @@ export class DataService {
 
   getAlbumes() {
     return this.http.get<any>('https://jsonplaceholder.typicode.com/albums');
+  }
+
+  getHeroes() {
+
+    /* Segment */
+    /* return this.http.get('assets/data/superheroes.json'); */
+
+    /* Skeleton */
+    return this.http.get('assets/data/superheroes.json')
+        .pipe(
+          delay(3500)
+        );
   }
 }

@@ -98,5 +98,15 @@
       "icon": "search",
       "name": "Searchbar",
       "redirectTo": "/searchbar"
+    },
+    {
+      "icon": "copy",
+      "name": "Segment - Skeleton",
+      "redirectTo": "/segment"
+    },
+    {
+      "icon": "albums",
+      "name": "Slides",
+      "redirectTo": "/slides"
     }
   ]
