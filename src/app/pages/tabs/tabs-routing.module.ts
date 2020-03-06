@@ -6,7 +6,7 @@ import { TabsPage } from './tabs.page';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'contact'
+    redirectTo: 'account'
   },
   {
     path: '',
@@ -14,16 +14,16 @@ const routes: Routes = [
     children: [
       {
         path: 'account',
-        loadChildren: '../avatar/avatar.module#AvatarPageModule'
+        loadChildren: () => import('../avatar/avatar.module').then(m => m.AvatarPageModule)
       },
       {
         path: 'contact',
-        loadChildren: '../list/list.module#ListPageModule'
-      },
+        loadChildren: () => import('../list/list.module').then(m => m.ListPageModule)
+      }/* ,
       {
-        path: 'settings',
-        loadChildren: '../list-reorder/list-reorder.module#ListReorderPageModule'
-      }
+        path: 'setting',
+        loadChildren: () => import('../botones/botones.module').then(m => m.BotonesPageModule)
+      } */
     ]
   }
 ];
