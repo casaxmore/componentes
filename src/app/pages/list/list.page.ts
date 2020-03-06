@@ -25,7 +25,6 @@ export class ListPage implements OnInit {
   async presentToast( message: string ) {
     const toast = await this.toastCtrl.create({
       message,
-      color: 'success',
       duration: 2000
     });
     toast.present();
