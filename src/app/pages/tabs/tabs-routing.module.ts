@@ -19,11 +19,7 @@ const routes: Routes = [
       {
         path: 'contact',
         loadChildren: () => import('../list/list.module').then(m => m.ListPageModule)
-      }/* ,
-      {
-        path: 'setting',
-        loadChildren: () => import('../botones/botones.module').then(m => m.BotonesPageModule)
-      } */
+      }
     ]
   }
 ];

@@ -15,9 +15,9 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {}
 
-/*   volver() {
+  volver() {
     this.navCtrl.navigateForward('/');
     console.log('Paso por aquí');
-  } */
+  }
 
 }
